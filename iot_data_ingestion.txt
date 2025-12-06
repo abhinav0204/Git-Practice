@@ -1,0 +1,39 @@
+import time
+import json
+from datetime import datetime
+
+class IoTDataIngestion:
+    def __init__(self):
+        self.data_buffer = []
+    
+    def ingest_sensor_data(self, sensor_id, value, unit):
+        """Ingest real-time sensor data"""
+        timestamp = datetime.now().isoformat()
+        data_point = {
+            "sensor_id": sensor_id,
+            "value": value,
+            "unit": unit,
+            "timestamp": timestamp
+        }
+        self.data_buffer.append(data_point)
+        return data_point
+    
+    def get_latest_data(self):
+        """Retrieve latest ingested data"""
+        return self.data_buffer[-1] if self.data_buffer else None
+    
+    def process_batch(self):
+        """Process accumulated data"""
+        if self.data_buffer:
+            print(f"Processing {len(self.data_buffer)} data points")
+            self.data_buffer.clear()
+
+# Example usage
+if __name__ == "__main__":
+    ingestion = IoTDataIngestion()
+    
+    ingestion.ingest_sensor_data("sensor_01", 23.5, "°C")
+    ingestion.ingest_sensor_data("sensor_02", 65.2, "%")
+    
+    print(json.dumps(ingestion.get_latest_data(), indent=2))
+    ingestion.process_batch()
