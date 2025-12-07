@@ -2,7 +2,12 @@ import pandas as pd
 import os
 from pathlib import Path
 
+
 # bug is fixed - master 
+=======
+#I'm fixing this bug - bugfix2
+
+THIS IS THE CHANGE APART FROM MASTER AND FEATURE
 
 def ingest_data(file_path):
     """
