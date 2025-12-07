@@ -1,6 +1,8 @@
 import json
 from datetime import datetime
 
+# bug fixed 
+
 #bug fixed
 #I'm ingesting the data
 def dummy_ingest():
