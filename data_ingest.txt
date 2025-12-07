@@ -1,1 +1,24 @@
-This is another data ingestion file
+import json
+from datetime import datetime
+
+def dummy_ingest():
+    """Dummy data ingestion function"""
+    dummy_data = [
+        {"id": 1, "name": "Record1", "timestamp": datetime.now().isoformat()},
+        {"id": 2, "name": "Record2", "timestamp": datetime.now().isoformat()},
+        {"id": 3, "name": "Record3", "timestamp": datetime.now().isoformat()},
+    ]
+    
+    return json.dumps(dummy_data, indent=2)
+
+if __name__ == "__main__":
+    result = dummy_ingest()
+    print(result)
+    
+    # Add data manually here
+    manual_data = {
+        "id": 4,
+        "name": "ManualRecord",
+        "timestamp": datetime.now().isoformat()
+    }
+    print(json.dumps(manual_data, indent=2))
