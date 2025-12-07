@@ -5,6 +5,7 @@ from datetime import datetime
 
 #bug fixed
 #I'm ingesting the data
+I'm ingesting batch data - master
 def dummy_ingest():
     """Dummy data ingestion function"""
     dummy_data = [
