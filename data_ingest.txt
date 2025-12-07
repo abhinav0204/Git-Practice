@@ -8,7 +8,10 @@ from datetime import datetime
 
 #bug fixed
 #I'm ingesting the data
-I'm ingesting batch data - master
+#I'm ingesting batch data - master
+
+# This bug is fixed for stashing
+
 def dummy_ingest():
     """Dummy data ingestion function"""
     dummy_data = [
