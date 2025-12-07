@@ -35,5 +35,6 @@ if __name__ == "__main__":
     ingestion.ingest_sensor_data("sensor_01", 23.5, "°C")
     ingestion.ingest_sensor_data("sensor_02", 65.2, "%")
     ingestion.ingest_sensor_data("sensor_03", 45.8, "ppm")
+    ingestion.ingest_sensor_data("sensor_04", 45.9, "ppm")
     print(json.dumps(ingestion.get_latest_data(), indent=2))
     ingestion.process_batch()
